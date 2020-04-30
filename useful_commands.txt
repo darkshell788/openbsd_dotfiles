@@ -1,0 +1,37 @@
+# restart network
+doas -u root sh /etc/netstart
+
+# patch the whole system
+syspatch
+
+# change backlit %
+xbacklight -set 40
+
+# volume control
+mixerctl
+
+# check firmware updates for wifi cards
+fw_update
+
+# hibernate
+zzz
+
+# poweroff
+halt -p
+
+# package locate
+pkg_add pkglocatedb
+pkglocate youtube
+
+# packages are binary compiled from ports
+# ports are source code that will be compiled locally
+# package db is updated with the sysupgrade
+cat /etc/installurl
+
+# mps-youtube
+doas pkg_add py3-pip
+doas pip3.7 install -U youtube-dl
+doas pkg_add mplayer
+doas pip3.7 install -U git+https://github.com/mps-youtube/mps-youtube.git
+# remember to use the google youtube api credentials with
+# set api_key Aiutrue.....

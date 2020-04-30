@@ -1,0 +1,11 @@
+# Graphical Interface
+teagtk			# text editor
+pcmanfm 		# file manager
+iridium			# chrome browser
+
+# Textual
+vim
+spectrwm
+ncmpcpp
+mpd
+mpc
