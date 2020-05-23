@@ -8,7 +8,7 @@ syspatch
 xbacklight -set 40
 
 # volume control
-mixerctl
+sndioctl output.level=0.5
 
 # check firmware updates for wifi cards
 fw_update
@@ -34,4 +34,9 @@ doas pip3.7 install -U youtube-dl
 doas pkg_add mplayer
 doas pip3.7 install -U git+https://github.com/mps-youtube/mps-youtube.git
 # remember to use the google youtube api credentials with
-# set api_key Aiutrue.....
+# set api_key AREFGgeigEfwfx.....
+# to check this bug, where you are forced to delete the cache
+# every day in .config/mps-youtube/ you can check:
+# https://github.com/mps-youtube/mps-youtube/issues/1063
+# Seems that the default API Key was disabled and it is hardcoded so
+# everytime it is cached.
